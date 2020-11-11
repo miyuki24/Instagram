@@ -10,47 +10,69 @@
         <!--LoginViewController-->
         <scene sceneID="8V0-wo-O28">
             <objects>
-                <viewController storyboardIdentifier="Login" title="LoginViewController" id="yv0-aa-OqQ" customClass="LoginViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" title="LoginViewController" modalPresentationStyle="fullScreen" id="yv0-aa-OqQ" customClass="LoginViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iqW-KO-AFj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oC1-DK-KV0">
-                                <rect key="frame" x="159" y="139" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oC1-DK-KV0">
+                                <rect key="frame" x="57" y="124" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Cf4-t8-wbP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvE-lD-bM6">
+                                <rect key="frame" x="57" y="168" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="mGD-V5-LJc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="アカウント作成時は表示名を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nug-xl-rUD">
+                                <rect key="frame" x="57" y="212" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Oab-Wt-WRV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvE-lD-bM6">
-                                <rect key="frame" x="159" y="233" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nug-xl-rUD">
-                                <rect key="frame" x="159" y="348" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRu-Ek-eBd">
-                                <rect key="frame" x="184" y="486" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRu-Ek-eBd">
+                                <rect key="frame" x="57" y="256" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="19l-kE-sQM"/>
+                                </constraints>
+                                <state key="normal" title="ログイン" backgroundImage="btn"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gty-EH-YiC">
-                                <rect key="frame" x="184" y="557" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gty-EH-YiC">
+                                <rect key="frame" x="57" y="306" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Gec-AK-oah"/>
+                                </constraints>
+                                <state key="normal" title="アカウント作成" backgroundImage="btn"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pvE-lD-bM6" firstAttribute="centerX" secondItem="iqW-KO-AFj" secondAttribute="centerX" id="0NY-Lf-dmi"/>
+                            <constraint firstItem="gty-EH-YiC" firstAttribute="centerX" secondItem="iqW-KO-AFj" secondAttribute="centerX" id="6my-yz-7sA"/>
+                            <constraint firstItem="oC1-DK-KV0" firstAttribute="centerX" secondItem="iqW-KO-AFj" secondAttribute="centerX" id="M6Y-pq-P3P"/>
+                            <constraint firstItem="nug-xl-rUD" firstAttribute="centerX" secondItem="iqW-KO-AFj" secondAttribute="centerX" id="MP8-NV-b9j"/>
+                            <constraint firstItem="gty-EH-YiC" firstAttribute="top" secondItem="WRu-Ek-eBd" secondAttribute="bottom" constant="10" id="MUk-mz-I4e"/>
+                            <constraint firstItem="oC1-DK-KV0" firstAttribute="top" secondItem="YAq-rs-C9T" secondAttribute="top" constant="80" id="UEx-Uo-q4n"/>
+                            <constraint firstItem="WRu-Ek-eBd" firstAttribute="top" secondItem="nug-xl-rUD" secondAttribute="bottom" constant="10" id="XX6-SY-ByY"/>
+                            <constraint firstItem="pvE-lD-bM6" firstAttribute="top" secondItem="oC1-DK-KV0" secondAttribute="bottom" constant="10" id="bE3-Xg-foA"/>
+                            <constraint firstItem="nug-xl-rUD" firstAttribute="top" secondItem="pvE-lD-bM6" secondAttribute="bottom" constant="10" id="gCG-CC-MNW"/>
+                            <constraint firstItem="WRu-Ek-eBd" firstAttribute="centerX" secondItem="iqW-KO-AFj" secondAttribute="centerX" id="vbi-4j-BJp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YAq-rs-C9T"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKm-Nm-L2G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2620" y="-506"/>
+            <point key="canvasLocation" x="2618.840579710145" y="-506.25"/>
         </scene>
         <!--ホーム-->
         <scene sceneID="zip-yg-mXH">
@@ -137,6 +159,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn" width="300" height="40"/>
         <image name="camera" width="25" height="25"/>
         <image name="home" width="25" height="25"/>
         <image name="setting" width="25" height="25"/>
