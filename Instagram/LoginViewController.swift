@@ -50,6 +50,7 @@ class LoginViewController: UIViewController {
                     changeRequest.commitChanges { error in
                         //エラーが起きた時
                         if let error = error {
+                            //localizedDescriptionは値を取り出す時に使う
                             print("DEBUG_PRINT: " + error.localizedDescription)
                             return
                         }
