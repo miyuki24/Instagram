@@ -18,7 +18,7 @@
 		7250D427255A267F007DB4F8 /* ImageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7250D426255A267F007DB4F8 /* ImageSelectViewController.swift */; };
 		7250D429255A268B007DB4F8 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7250D428255A268B007DB4F8 /* PostViewController.swift */; };
 		7250D42B255A2696007DB4F8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7250D42A255A2696007DB4F8 /* SettingViewController.swift */; };
-		727CD66B255AC80C007E40BB /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727CD66A255AC80C007E40BB /* TabBarControllerViewController.swift */; };
+		725A218F255D4ADC0027C7B3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A218E255D4ADC0027C7B3 /* TabBarController.swift */; };
 		AFC5D68DA40E457ACCBB4AF8 /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC015981B253A8F528056BC8 /* Pods_Instagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +36,7 @@
 		7250D426255A267F007DB4F8 /* ImageSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectViewController.swift; sourceTree = "<group>"; };
 		7250D428255A268B007DB4F8 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		7250D42A255A2696007DB4F8 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		727CD66A255AC80C007E40BB /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
+		725A218E255D4ADC0027C7B3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = SOURCE_ROOT; };
 		8699880C4D3F6C6C5CFF5C66 /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		BC015981B253A8F528056BC8 /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7FD7115BAB6165E3FFFBC73 /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +75,7 @@
 		7250D3F7255A1D7A007DB4F8 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				725A218E255D4ADC0027C7B3 /* TabBarController.swift */,
 				7250D3F8255A1D7A007DB4F8 /* AppDelegate.swift */,
 				7250D3FA255A1D7A007DB4F8 /* SceneDelegate.swift */,
 				723B69AF255AB70300C50625 /* LoginViewController.swift */,
@@ -82,7 +83,6 @@
 				7250D426255A267F007DB4F8 /* ImageSelectViewController.swift */,
 				7250D428255A268B007DB4F8 /* PostViewController.swift */,
 				7250D42A255A2696007DB4F8 /* SettingViewController.swift */,
-				727CD66A255AC80C007E40BB /* TabBarControllerViewController.swift */,
 				7250D3FE255A1D7A007DB4F8 /* Main.storyboard */,
 				7250D401255A1D7D007DB4F8 /* Assets.xcassets */,
 				7250D403255A1D7D007DB4F8 /* LaunchScreen.storyboard */,
@@ -226,12 +226,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				723B69B0255AB70300C50625 /* LoginViewController.swift in Sources */,
+				725A218F255D4ADC0027C7B3 /* TabBarController.swift in Sources */,
 				7250D427255A267F007DB4F8 /* ImageSelectViewController.swift in Sources */,
 				7250D425255A2672007DB4F8 /* HomeViewController.swift in Sources */,
 				7250D429255A268B007DB4F8 /* PostViewController.swift in Sources */,
 				7250D42B255A2696007DB4F8 /* SettingViewController.swift in Sources */,
 				7250D3F9255A1D7A007DB4F8 /* AppDelegate.swift in Sources */,
-				727CD66B255AC80C007E40BB /* TabBarControllerViewController.swift in Sources */,
 				7250D3FB255A1D7A007DB4F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
