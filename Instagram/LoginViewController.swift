@@ -2,10 +2,9 @@
 //  LoginViewController.swift
 //  Instagram
 //
-//  Created by 田中美幸 on 2020/11/10.
+//  Created by 田中美幸 on 2020/11/13.
 //  Copyright © 2020 miyuki.tanaka2. All rights reserved.
 //
-
 import UIKit
 import Firebase
 import SVProgressHUD

@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7221E8FF255EA7A800E65809 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7221E8FE255EA7A800E65809 /* TabBarController.swift */; };
+		7221E901255EAB9F00E65809 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7221E900255EAB9F00E65809 /* LoginViewController.swift */; };
 		723B69A8255AB4AE00C50625 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 723B69A7255AB4AE00C50625 /* GoogleService-Info.plist */; };
-		723B69B0255AB70300C50625 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723B69AF255AB70300C50625 /* LoginViewController.swift */; };
 		7250D3F9255A1D7A007DB4F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7250D3F8255A1D7A007DB4F8 /* AppDelegate.swift */; };
 		7250D3FB255A1D7A007DB4F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7250D3FA255A1D7A007DB4F8 /* SceneDelegate.swift */; };
 		7250D400255A1D7A007DB4F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7250D3FE255A1D7A007DB4F8 /* Main.storyboard */; };
@@ -18,13 +19,13 @@
 		7250D427255A267F007DB4F8 /* ImageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7250D426255A267F007DB4F8 /* ImageSelectViewController.swift */; };
 		7250D429255A268B007DB4F8 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7250D428255A268B007DB4F8 /* PostViewController.swift */; };
 		7250D42B255A2696007DB4F8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7250D42A255A2696007DB4F8 /* SettingViewController.swift */; };
-		725A218F255D4ADC0027C7B3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A218E255D4ADC0027C7B3 /* TabBarController.swift */; };
 		AFC5D68DA40E457ACCBB4AF8 /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC015981B253A8F528056BC8 /* Pods_Instagram.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7221E8FE255EA7A800E65809 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		7221E900255EAB9F00E65809 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		723B69A7255AB4AE00C50625 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		723B69AF255AB70300C50625 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7250D3F5255A1D7A007DB4F8 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7250D3F8255A1D7A007DB4F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7250D3FA255A1D7A007DB4F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +37,6 @@
 		7250D426255A267F007DB4F8 /* ImageSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectViewController.swift; sourceTree = "<group>"; };
 		7250D428255A268B007DB4F8 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		7250D42A255A2696007DB4F8 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		725A218E255D4ADC0027C7B3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = SOURCE_ROOT; };
 		8699880C4D3F6C6C5CFF5C66 /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		BC015981B253A8F528056BC8 /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7FD7115BAB6165E3FFFBC73 /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,15 +75,15 @@
 		7250D3F7255A1D7A007DB4F8 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
-				725A218E255D4ADC0027C7B3 /* TabBarController.swift */,
 				7250D3F8255A1D7A007DB4F8 /* AppDelegate.swift */,
 				7250D3FA255A1D7A007DB4F8 /* SceneDelegate.swift */,
-				723B69AF255AB70300C50625 /* LoginViewController.swift */,
+				7221E900255EAB9F00E65809 /* LoginViewController.swift */,
 				7250D424255A2672007DB4F8 /* HomeViewController.swift */,
 				7250D426255A267F007DB4F8 /* ImageSelectViewController.swift */,
 				7250D428255A268B007DB4F8 /* PostViewController.swift */,
 				7250D42A255A2696007DB4F8 /* SettingViewController.swift */,
 				7250D3FE255A1D7A007DB4F8 /* Main.storyboard */,
+				7221E8FE255EA7A800E65809 /* TabBarController.swift */,
 				7250D401255A1D7D007DB4F8 /* Assets.xcassets */,
 				7250D403255A1D7D007DB4F8 /* LaunchScreen.storyboard */,
 				7250D406255A1D7D007DB4F8 /* Info.plist */,
@@ -225,11 +225,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				723B69B0255AB70300C50625 /* LoginViewController.swift in Sources */,
-				725A218F255D4ADC0027C7B3 /* TabBarController.swift in Sources */,
+				7221E8FF255EA7A800E65809 /* TabBarController.swift in Sources */,
 				7250D427255A267F007DB4F8 /* ImageSelectViewController.swift in Sources */,
 				7250D425255A2672007DB4F8 /* HomeViewController.swift in Sources */,
 				7250D429255A268B007DB4F8 /* PostViewController.swift in Sources */,
+				7221E901255EAB9F00E65809 /* LoginViewController.swift in Sources */,
 				7250D42B255A2696007DB4F8 /* SettingViewController.swift in Sources */,
 				7250D3F9255A1D7A007DB4F8 /* AppDelegate.swift in Sources */,
 				7250D3FB255A1D7A007DB4F8 /* SceneDelegate.swift in Sources */,
