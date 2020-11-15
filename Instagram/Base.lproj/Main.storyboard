@@ -177,43 +177,42 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0d1-CF-tlX">
-                                <rect key="frame" x="57" y="204" width="300" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWe-Ni-VzE">
+                                <rect key="frame" x="57" y="194" width="300" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="q49-8i-cuF"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="WBZ-sx-gej"/>
                                 </constraints>
                                 <state key="normal" title="投稿" backgroundImage="btn"/>
                                 <connections>
-                                    <action selector="handlePostButton:" destination="PGr-jZ-lWj" eventType="touchUpInside" id="NEM-OS-aPY"/>
+                                    <action selector="handlePostButton:" destination="PGr-jZ-lWj" eventType="touchUpInside" id="YWY-Uc-0JW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0p-Hn-b64">
-                                <rect key="frame" x="57" y="254" width="300" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHB-62-aqc">
+                                <rect key="frame" x="57" y="244" width="300" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="7Mo-K1-LKN"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="3pr-uC-cXg"/>
                                 </constraints>
                                 <state key="normal" title="キャンセル" backgroundImage="btn"/>
                                 <connections>
-                                    <action selector="handleCancelButton:" destination="PGr-jZ-lWj" eventType="touchUpInside" id="78P-NU-NjN"/>
+                                    <action selector="handleCancelButton:" destination="PGr-jZ-lWj" eventType="touchUpInside" id="A4Q-X5-A8I"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Mew-MM-Iki" firstAttribute="trailing" secondItem="CQt-u7-3a2" secondAttribute="trailing" constant="10" id="EYG-lR-0ev"/>
-                            <constraint firstItem="0d1-CF-tlX" firstAttribute="centerX" secondItem="Xt0-fy-cI2" secondAttribute="centerX" id="IQt-9i-IV6"/>
-                            <constraint firstItem="H0p-Hn-b64" firstAttribute="top" secondItem="0d1-CF-tlX" secondAttribute="bottom" constant="10" id="O61-Qf-jID"/>
-                            <constraint firstItem="H0p-Hn-b64" firstAttribute="centerX" secondItem="Xt0-fy-cI2" secondAttribute="centerX" id="YL8-ae-DDO"/>
+                            <constraint firstItem="BHB-62-aqc" firstAttribute="centerX" secondItem="Xt0-fy-cI2" secondAttribute="centerX" id="Naw-bw-B6p"/>
                             <constraint firstItem="CQt-u7-3a2" firstAttribute="leading" secondItem="KPZ-5d-NZ6" secondAttribute="trailing" constant="10" id="b4S-dG-y7o"/>
-                            <constraint firstItem="0d1-CF-tlX" firstAttribute="top" secondItem="KPZ-5d-NZ6" secondAttribute="bottom" constant="20" id="eCZ-4J-vXC"/>
+                            <constraint firstItem="BHB-62-aqc" firstAttribute="top" secondItem="fWe-Ni-VzE" secondAttribute="bottom" constant="10" id="e9f-Ja-y8L"/>
                             <constraint firstItem="KPZ-5d-NZ6" firstAttribute="top" secondItem="Mew-MM-Iki" secondAttribute="top" constant="20" id="lej-FH-0VL"/>
                             <constraint firstItem="KPZ-5d-NZ6" firstAttribute="leading" secondItem="Mew-MM-Iki" secondAttribute="leading" constant="10" id="oMG-I6-yIl"/>
+                            <constraint firstItem="fWe-Ni-VzE" firstAttribute="centerX" secondItem="Xt0-fy-cI2" secondAttribute="centerX" id="pCo-Sg-Awq"/>
                             <constraint firstItem="CQt-u7-3a2" firstAttribute="bottom" secondItem="KPZ-5d-NZ6" secondAttribute="bottom" id="tPZ-Ne-yeA"/>
+                            <constraint firstItem="fWe-Ni-VzE" firstAttribute="top" secondItem="CQt-u7-3a2" secondAttribute="bottom" constant="10" id="tl3-t2-ReB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mew-MM-Iki"/>
                     </view>
                     <connections>
-                        <outlet property="handlePostButton" destination="0d1-CF-tlX" id="NPA-xU-xye"/>
                         <outlet property="imageView" destination="KPZ-5d-NZ6" id="FfI-A1-kAr"/>
                         <outlet property="textField" destination="CQt-u7-3a2" id="Jom-7N-emd"/>
                     </connections>
