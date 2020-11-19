@@ -33,9 +33,11 @@ class PostTableViewCell: UITableViewCell {
         //ダウンロード中である事を示すグレーのぐるぐる・FirebaseUIをインポートして事で利用可能になるプロパティ
         postImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         let imageRef = Storage.storage().reference().child(Const.ImagePath).child(postData.id + ".jpg")
-        //Cloud Storageの画像保存場所を指定してダウンロード＆UIImageViewに表示
+        //Cloud Storageの画像保存場所を指定してダウンロード＆UIImageViewに表示・二回目以降の表示は素早い
         postImageView.sd_setImage(with: imageRef)
+        //キャプションを表示
         self.captionLabel.text = "\(postData.name!): \(postData.caption!)"
+        //Dateクラスに入っている日時情報を文字列に変換する
         self.dateLabel.text = ""
         if let date = postData.date{
             let formatter = DateFormatter()
@@ -43,8 +45,10 @@ class PostTableViewCell: UITableViewCell {
             let dateString = formatter.string(from: date)
             self.dateLabel.text = dateString
         }
+        //いいね数・postData.likesにいいねを押した人が格納されている
         let likeNumber = postData.likes.count
         likeLabel.text = "\(likeNumber)"
+        //いいねを押すとUIButtonクラスのsetImageメソッドが使われてlike_exist(赤ハート)がセットされる
         if postData.isLiked{
             let buttonImage = UIImage(named: "like_exist")
             self.likeButton.setImage(buttonImage, for: .normal)

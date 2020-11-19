@@ -16,6 +16,7 @@ class PostData: NSObject {
     var name: String?
     var caption: String?
     var date: Date?
+    //いいねを押した人を格納する
     var likes: [String] = []
     var isLiked: Bool = false
 
