@@ -92,7 +92,19 @@
                     <view key="view" contentMode="scaleToFill" id="Hrd-fc-ZOX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HQ7-zo-agT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HQ7-zo-agT" firstAttribute="leading" secondItem="Pil-hh-hkz" secondAttribute="leading" id="0Dc-Px-lrN"/>
+                            <constraint firstItem="HQ7-zo-agT" firstAttribute="top" secondItem="Pil-hh-hkz" secondAttribute="top" id="F7Q-Kk-k83"/>
+                            <constraint firstItem="Pil-hh-hkz" firstAttribute="bottom" secondItem="HQ7-zo-agT" secondAttribute="bottom" id="Mth-Qn-PUO"/>
+                            <constraint firstItem="Pil-hh-hkz" firstAttribute="trailing" secondItem="HQ7-zo-agT" secondAttribute="trailing" id="f5C-Ka-ds2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Pil-hh-hkz"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ホーム" image="home" id="zu9-q4-bRc"/>

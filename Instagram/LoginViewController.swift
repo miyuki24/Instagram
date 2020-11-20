@@ -63,7 +63,7 @@ class LoginViewController: UIViewController {
             //HUDの表示を開始・処理中を表す
             SVProgressHUD.show()
             
-            //ユーザー作成・createUserメソッドを使う
+            //createUserメソッドを使ってユーザー作成
             //completionではクロージャを指定（クロージャ：処理の塊を変数や引数にしておく物）
             //createUserメソッドの呼び出しはすぐに戻って来る。アカウント作成完了の通知がサーバーから届いた時クロージャが呼ばれる
             //クロージャのauthResultに認証結果情報・errorにエラー発生時のエラー情報
