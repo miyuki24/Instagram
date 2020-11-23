@@ -13,7 +13,7 @@ import Firebase
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-
+    
     //投稿データを表示するために格納する配列
     var postArray: [PostData] = []
     
@@ -49,12 +49,15 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         print("DEBAG_PRINT: snapshotの取得が失敗しました")
                         return
                     }
-                    //
+                    //querySnapshotのdocumentsプロパティをPostDataに変換してpostArrayに格納する
+                    //mapメソッドは配列の要素を変換して新しい配列を作成するメソッド
                     self.postArray = querySnapshot!.documents.map { document in
                         print("DEBAG_PRINT: document取得\(document.documentID)")
                         let postData = PostData(document: document)
+                        //引数documentで変換元の配列要素を受け取り返却する。これで配列を変換できる
                         return postData
                     }
+                    //再読み込み
                     self.tableView.reloadData()
                 }
             }
@@ -83,6 +86,44 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //対応するデータをセルへ表示
         cell.setPostData(postArray[indexPath.row])
 
+        //セル内のボタンだからメソッド内で設定する・addTargetメソッドが青い線を引っ張る設定法の代わり
+        //#selectorで指定したメソッドが呼び出されるメソッド
+        //第一引数にはUIButtonのインスタンス・第二引数にはタップイベントが格納される
+        cell.likeButton.addTarget(self, action:#selector(handleButton(_:forEvent:)), for: .touchUpInside)
+        
         return cell
+ 
     }
+    
+    //selector指定で呼び出されるメソッドは@objcがつく
+    @objc func handleButton(_ sender: UIButton, forEvent event: UIEvent){
+        print("DEBUG_PRINT: likeボタンがタップされました。")
+        
+        //タッチ情報を取り出す
+        let touch = event.allTouches?.first
+        //TableView内のタッチした座標を割り出す
+        let point = touch!.location(in: self.tableView)
+        //タッチした座標がtableView内のどのindexPath位置なのか取得する
+        let indexPath = tableView.indexPathForRow(at: point)
+        
+        //タップしたセルの投稿データを取得する
+        let postData = postArray[indexPath!.row]
+        
+        if let myid = Auth.auth().currentUser?.uid {
+            var updateValue: FieldValue
+            //すでにいいねボタンが押されている時
+            if postData.isLiked {
+                //myidを取り除く
+                updateValue = FieldValue.arrayRemove([myid])
+            } else {
+                //myidを追加する
+                updateValue = FieldValue.arrayUnion([myid])
+            }
+            //投稿データの保存場所を定義
+            let postRef = Firestore.firestore().collection(Const.PostPath).document(postData.id)
+            //更新する
+            postRef.updateData(["likes": updateValue])
+        }
+    }
+    
 }

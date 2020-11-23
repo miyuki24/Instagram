@@ -108,6 +108,9 @@
                         <viewLayoutGuide key="safeArea" id="Pil-hh-hkz"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ホーム" image="home" id="zu9-q4-bRc"/>
+                    <connections>
+                        <outlet property="tableView" destination="HQ7-zo-agT" id="FW7-ax-cnn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xV4-z7-gJM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
