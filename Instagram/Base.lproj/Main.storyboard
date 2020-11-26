@@ -110,11 +110,28 @@
                     <tabBarItem key="tabBarItem" title="ホーム" image="home" id="zu9-q4-bRc"/>
                     <connections>
                         <outlet property="tableView" destination="HQ7-zo-agT" id="FW7-ax-cnn"/>
+                        <segue destination="tfV-Ql-t6u" kind="show" identifier="toComment" id="WqP-Y9-di5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xV4-z7-gJM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-636" y="226"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FJX-RR-Obx">
+            <objects>
+                <viewController storyboardIdentifier="comment" id="tfV-Ql-t6u" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fxb-7d-U4e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="yjW-6B-Rxw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qct-JS-G2o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lt3-jL-pao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-636" y="903"/>
         </scene>
         <!--投稿-->
         <scene sceneID="tne-QT-ifu">

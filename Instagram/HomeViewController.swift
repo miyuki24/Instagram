@@ -91,6 +91,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //第一引数にはUIButtonのインスタンス・第二引数にはタップイベントが格納される
         cell.likeButton.addTarget(self, action:#selector(handleButton(_:forEvent:)), for: .touchUpInside)
         
+        //コメントアクション
+        cell.commentButton.addTarget(self, action: #selector(handleCommentButton(_:forEvent:)), for: .touchUpInside)
+        
         return cell
  
     }
@@ -124,6 +127,20 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             //更新する
             postRef.updateData(["likes": updateValue])
         }
+    }
+    
+    @objc func handleCommentButton(_ sender: UIButton, forEvent event: UIEvent){
+        print("DEBAG_PRINT: commentボタンがタップされました。")
+        
+        let touch = event.allTouches?.first
+        let point = touch!.location(in: self.tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+        
+        self.performSegue(withIdentifier: "toComment", sender: self)
+        
+        let postData = postArray[indexPath!.row]
+        let postRef = Firestore.firestore().collection(Const.PostPath).document(postData.id)
+        postRef.updateData(["comments": ])
     }
     
 }

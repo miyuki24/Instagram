@@ -18,6 +18,7 @@ class PostData: NSObject {
     var date: Date?
     //いいねを押した人を格納する
     var likes: [String] = []
+    var comments: [String] = []
     var isLiked: Bool = false
 
     init(document: QueryDocumentSnapshot) {
