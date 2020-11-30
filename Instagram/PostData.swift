@@ -36,6 +36,9 @@ class PostData: NSObject {
         if let likes = postDic["likes"] as? [String] {
             self.likes = likes
         }
+        if let comments = postDic["comments"] as? [String]{
+            self.comments = comments
+        }
         if let myid = Auth.auth().currentUser?.uid {
             //likes(いいね)の中にmyidが含まれているか確認：自分がいいねを押しているか
             if self.likes.firstIndex(of: myid) != nil {
