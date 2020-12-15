@@ -139,10 +139,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.performSegue(withIdentifier: "toComment", sender: self)
         
         let postData = postArray[indexPath!.row]
-        
-        let postRef = Firestore.firestore().collection(Const.PostPath).document(postData.id)
-        //渡す値どうする
-        postRef.updateData(["comments": ])
     }
     
 }

@@ -31,8 +31,10 @@ class PostTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    //データを送る
     override func prepare(for segue: UIStoryboard, sender: Any?){
-        let commentViewController: CommentViewController = segue.distination as! CommentViewController
+        let commentViewController: CommentViewController = segue.destination as! CommentViewController
+        var commentText = displayCommentLabel.text = ""
     }
     
     func setPostData(_ postData: PostData){
@@ -51,6 +53,7 @@ class PostTableViewCell: UITableViewCell {
             let dateString = formatter.string(from: date)
             self.dateLabel.text = dateString
         }
+        self.displayCommentLabel.text = "\(postData.commentUser!): \(postData.comments)"
         //いいね数・postData.likesにいいねを押した人が格納されている
         let likeNumber = postData.likes.count
         likeLabel.text = "\(likeNumber)"

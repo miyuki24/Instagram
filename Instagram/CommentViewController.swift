@@ -12,6 +12,8 @@ import SVProgressHUD
 
 class CommentViewController: UIViewController {
     
+    var commentText: String = ""
+    
     //投稿者のコメント
     @IBOutlet weak var commentLabel: UILabel!
     
@@ -21,6 +23,8 @@ class CommentViewController: UIViewController {
     //コメント保存ボタン
     @IBAction func CommentAddButton(_ sender: Any) {
         
+        let postRef = Firestore.firestore().collection(Const.PostPath).document()
+        
         if let displaycomment = CommentTextFiled.text{
             //コメント未入力の場合
             if displaycomment.isEmpty{
@@ -29,7 +33,8 @@ class CommentViewController: UIViewController {
             }
             let comment = Auth.auth().currentUser
             if let comment = comment{
-                let addcomment = comment
+                let addcomment = comment.createProfileChangeRequest()
+                addcomment.displaycomment
             }
         }
         //一つ前の画面に戻る
@@ -42,13 +47,11 @@ class CommentViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    //コメントをラベルに表示
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let maincomment = Auth.auth().currentUser
-        if let maincomment = maincomment {
-            commentLabel.text = maincomment.Comment
-        }
+        commentLabel.text = commentText
     }
 }
 
