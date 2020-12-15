@@ -134,7 +134,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xxu-5X-ZsX">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="コメントを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xxu-5X-ZsX">
                                 <rect key="frame" x="57" y="154.5" width="300" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="4bM-i3-trt"/>
@@ -152,6 +152,7 @@
                                 </constraints>
                                 <state key="normal" title="保存" backgroundImage="btn"/>
                                 <connections>
+                                    <action selector="CommentAddButton:" destination="tfV-Ql-t6u" eventType="touchUpInside" id="Apu-hE-TOm"/>
                                     <action selector="commentAddButton:" destination="tfV-Ql-t6u" eventType="touchUpInside" id="rFE-MI-YPk"/>
                                 </connections>
                             </button>
