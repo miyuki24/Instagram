@@ -31,12 +31,6 @@ class PostTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    //データを送る
-    override func prepare(for segue: UIStoryboard, sender: Any?){
-        let commentViewController: CommentViewController = segue.destination as! CommentViewController
-        var commentText = displayCommentLabel.text = ""
-    }
-    
     func setPostData(_ postData: PostData){
         //ダウンロード中である事を示すグレーのぐるぐる・FirebaseUIをインポートして事で利用可能になるプロパティ
         postImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
