@@ -141,9 +141,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="commentTextFiled:" destination="tfV-Ql-t6u" eventType="editingDidEnd" id="VZS-em-tnh"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pB9-JJ-YYH">
                                 <rect key="frame" x="57" y="198.5" width="300" height="40"/>
@@ -153,7 +150,6 @@
                                 <state key="normal" title="保存" backgroundImage="btn"/>
                                 <connections>
                                     <action selector="CommentAddButton:" destination="tfV-Ql-t6u" eventType="touchUpInside" id="Apu-hE-TOm"/>
-                                    <action selector="commentAddButton:" destination="tfV-Ql-t6u" eventType="touchUpInside" id="rFE-MI-YPk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKC-Zo-nFb">

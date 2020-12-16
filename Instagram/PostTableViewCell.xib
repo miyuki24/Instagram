@@ -91,31 +91,13 @@
                 <outlet property="captionLabel" destination="UtJ-Md-4Tf" id="f5D-9x-RIN"/>
                 <outlet property="commentButton" destination="b9x-Dg-oDc" id="7HM-es-7d0"/>
                 <outlet property="dateLabel" destination="Kli-nb-3jh" id="Zfe-Nb-iao"/>
-                <outlet property="displayCommentLabel" destination="UtJ-Md-4Tf" id="uno-eR-V1K"/>
+                <outlet property="displayCommentLabel" destination="OsO-NM-zfw" id="0gC-5T-lCg"/>
                 <outlet property="likeButton" destination="tMN-WH-noC" id="qjk-AZ-NY1"/>
                 <outlet property="likeLabel" destination="oSi-Kf-wLZ" id="Q55-BF-iXi"/>
                 <outlet property="postImageView" destination="cI6-M1-9pO" id="1SK-yK-qjI"/>
             </connections>
             <point key="canvasLocation" x="-86.231884057971016" y="94.419642857142847"/>
         </tableViewCell>
-        <viewController id="4G8-N0-AVx">
-            <view key="view" contentMode="scaleToFill" id="6dR-fJ-J6A">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                <viewLayoutGuide key="safeArea" id="Qm9-Bs-tP3"/>
-            </view>
-            <point key="canvasLocation" x="504" y="112"/>
-        </viewController>
-        <viewController id="l9d-Ey-RIs">
-            <view key="view" contentMode="scaleToFill" id="29d-a5-fP4">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                <viewLayoutGuide key="safeArea" id="6bu-Rs-rY9"/>
-            </view>
-            <point key="canvasLocation" x="542" y="103"/>
-        </viewController>
     </objects>
     <resources>
         <image name="comment" width="2768" height="2486"/>

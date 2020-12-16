@@ -19,7 +19,7 @@ class PostData: NSObject {
     //いいねを押した人を格納する
     var likes: [String] = []
     var commentUser: String?
-    var comments: [String] = []
+    var comments: String?
     var isLiked: Bool = false
 
     init(document: QueryDocumentSnapshot) {
@@ -34,12 +34,10 @@ class PostData: NSObject {
         let timestamp = postDic["date"] as? Timestamp
         self.date = timestamp?.dateValue()
         self.commentUser = postDic["commentUser"] as? String
+        self.comments = postDic["comments"] as? String
         
         if let likes = postDic["likes"] as? [String] {
             self.likes = likes
-        }
-        if let comments = postDic["comments"] as? [String]{
-            self.comments = comments
         }
         if let myid = Auth.auth().currentUser?.uid {
             //likes(いいね)の中にmyidが含まれているか確認：自分がいいねを押しているか
