@@ -12,6 +12,8 @@ import SVProgressHUD
 
 class CommentViewController: UIViewController {
     
+    let comment = "UserName: Comment"
+    
     //投稿者のコメント
     @IBOutlet weak var commentLabel: UILabel!
     
