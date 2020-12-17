@@ -20,6 +20,7 @@ class CommentViewController: UIViewController {
     
     //コメント保存ボタン
     @IBAction func CommentAddButton(_ sender: Any) {
+        //保存場所
         let postRef = Firestore.firestore().collection(Const.PostPath).document()
         if let displaycomment = CommentTextFiled.text{
             //コメント未入力の場合
@@ -31,11 +32,11 @@ class CommentViewController: UIViewController {
             let commentDic = [
                 "commentUser":name!,
                 "comments":self.CommentTextFiled.text!
-            ] as [String: Any]
+                ] as [String: Any]
             postRef.setData(commentDic)
+            SVProgressHUD.showSuccess(withStatus: "コメントしました")
+            UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
         }
-        //一つ前の画面に戻る
-        self.dismiss(animated: true, completion: nil)
     }
     
     //コメントキャンセルボタン
@@ -58,8 +59,6 @@ class CommentViewController: UIViewController {
     }
 }
 
-//投稿者のコメント引き継ぎ
-//コメントを得る
-//コメントを保存する
-//コメントを表示する
-//ラベルにコメントを表示
+//投稿者のコメント引き継ぎ：クリア？
+//ラベルにコメントを表示：コメントがない場合、「コメントはまだありません」と表記したい
+//ホームラインに戻ったら更新し直す
