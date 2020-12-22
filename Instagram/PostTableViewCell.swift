@@ -53,7 +53,7 @@ class PostTableViewCell: UITableViewCell {
         for comment in postData.comments{
             commentStr = commentStr + comment + "\n"
         }
-        self.displayCommentLabel.text = "commentStr"
+        self.displayCommentLabel.text = commentStr
         //いいね数・postData.likesにいいねを押した人が格納されている
         let likeNumber = postData.likes.count
         likeLabel.text = "\(likeNumber)"

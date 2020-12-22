@@ -28,13 +28,13 @@ class CommentViewController: UIViewController {
                 SVProgressHUD.showError(withStatus: "コメントを入力してください")
                 return
             }
-            //ユーザー情報
-            let commentUser = Auth.auth().currentUser
+            //ユーザー情報(名前)
+            let commentUser = Auth.auth().currentUser?.displayName
             //更新データを作成
             var updateValue: FieldValue
             //保存場所
             let postRef = Firestore.firestore().collection(Const.PostPath).document(commentData.id)
-            updateValue = FieldValue.arrayUnion([commentUser.displayName + ":" + displaycomment])
+            updateValue = FieldValue.arrayUnion([commentUser! + ":" + displaycomment])
             postRef.updateData(["comments": updateValue])
             SVProgressHUD.showSuccess(withStatus: "コメントしました")
             //画面遷移
