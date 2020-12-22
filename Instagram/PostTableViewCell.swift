@@ -31,6 +31,7 @@ class PostTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    //セルに表示
     func setPostData(_ postData: PostData){
         //ダウンロード中である事を示すグレーのぐるぐる・FirebaseUIをインポートして事で利用可能になるプロパティ
         postImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
@@ -47,10 +48,9 @@ class PostTableViewCell: UITableViewCell {
             let dateString = formatter.string(from: date)
             self.dateLabel.text = dateString
         }
-        let commentsData = postData
         var commentStr = ""
-        //配列ではなく一つのデータとして
-        for comment in commentsData{
+        //改行しながら追加していく
+        for comment in postData.comments{
             commentStr = commentStr + comment + "\n"
         }
         self.displayCommentLabel.text = "commentStr"

@@ -141,7 +141,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let indexPath = tableView.indexPathForRow(at: point)
         
         //タップしたセルの配列をselectedPostDataに代入
-        let postData = postArray(indexPath!.row)
+        let postData = postArray[indexPath!.row]
         self.selectedPostData = postData
         
         //コメント入力画面に遷移
