@@ -47,11 +47,13 @@ class PostTableViewCell: UITableViewCell {
             let dateString = formatter.string(from: date)
             self.dateLabel.text = dateString
         }
-        for comment in CommentViewController{
-            var commentStr = ""
-            commentStr = "\n name: comments"
-            self.displayCommentLabel.text = "\(commentStr)"
+        let commentsData = postData
+        var commentStr = ""
+        //配列ではなく一つのデータとして
+        for comment in commentsData{
+            commentStr = commentStr + comment + "\n"
         }
+        self.displayCommentLabel.text = "commentStr"
         //いいね数・postData.likesにいいねを押した人が格納されている
         let likeNumber = postData.likes.count
         likeLabel.text = "\(likeNumber)"

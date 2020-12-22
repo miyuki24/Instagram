@@ -17,11 +17,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //投稿データを表示するために格納する配列
     var postArray: [PostData] = []
     
-    var commentArry: [PostData] = []
-    
     //データ更新の監視をするためのリスナー
     var listener: ListenerRegistration!
 
+    var selectedPostData: PostData?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -131,6 +131,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    //コメントボタン
     @objc func handleCommentButton(_ sender: UIButton, forEvent event: UIEvent){
         print("DEBAG_PRINT: commentボタンがタップされました。")
         
@@ -139,15 +140,16 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let point = touch!.location(in: self.tableView)
         let indexPath = tableView.indexPathForRow(at: point)
         
-        //投稿データ
-        let postData = postArray[indexPath!.row]
+        //タップしたセルの配列をselectedPostDataに代入
+        let postData = postArray(indexPath!.row)
+        self.selectedPostData = postData
         
         //コメント入力画面に遷移
         self.performSegue(withIdentifier: "toComment", sender: self)
     }
-    //データを送る
+    //selectedPostDataを送る
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        let commentViewController: CommentViewController = segue.destination as! CommentViewController
+        let commentViewController:CommentViewController = segue.destination as! CommentViewController
+        commentViewController.commentData = self.selectedPostData
     }
-    
 }
